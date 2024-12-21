@@ -28,6 +28,11 @@ public class WhatsappService {
                 .pathSegment(phoneNumberId, "messages")
                 .toUriString();
 
+         // Validate the access token
+        if (accessToken == null || accessToken.isEmpty()) {
+            return "Error: Access token is not configured.";
+        }
+        
         // Create HTTP Headers
         HttpHeaders headers = new HttpHeaders();
         headers.set("Authorization", "Bearer " + accessToken);
