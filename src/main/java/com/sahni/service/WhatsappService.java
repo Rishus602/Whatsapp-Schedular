@@ -35,7 +35,7 @@ public class WhatsappService {
         
         // Create HTTP Headers
         HttpHeaders headers = new HttpHeaders();
-        headers.set("Authorization", "Bearer" + accessToken);
+        headers.set("Authorization", "Bearer " + accessToken);
         headers.set("Content-Type", "application/json");
 
         // Construct the request body with the template
