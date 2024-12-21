@@ -11,7 +11,7 @@ public class WhatsappSchedular {
 private WhatsappService whatsappService;
 
 
-    @Scheduled(cron = "0 0 * * * *")
+    @Scheduled(fixedRate = 3000)
     public void sendScheduleMessage(){
 
         try {
